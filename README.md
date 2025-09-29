@@ -8,13 +8,6 @@ ASCE (Agent-based Social Cognition Evolution) is the first simulation and analys
 
 The rise of social media has profoundly reshaped information dissemination, public opinion formation, and collective action. Understanding user behavior and its underlying psychological mechanisms is crucial for both social science research and public governance. However, the inherent complexity of online environments poses significant modeling challenges. ASCE addresses these challenges by providing an integrated system for behavioral simulation, cognitive modeling, and visual analytics.
 
-## Key Features
-
-- **Cognitive Traceability**: Track and analyze the cognitive drivers behind online social phenomena
-- **Cognitive Reasoning Chain (CRC)**: Novel mechanism modeling the pathway from Mood → Emotion → Thinking → Stance → Intention
-- **High-Fidelity Simulation**: Realistic social media environment with dynamic interactions
-- **Visual Analytics**: Interactive web-based platform for exploring simulation results
-- **Scalable Architecture**: Support for large-scale multi-agent simulations
 
 ## System Architecture
 
@@ -35,21 +28,6 @@ ASCE consists of five core, collaborating modules working across three distinct 
 - **Data Capture**: Records all interaction and cognitive state data
 - **Visual Analytics**: Multi-dimensional analysis through interactive web interface
 
-## Core Components
-
-### Cognitive Reasoning Chain (CRC)
-
-The CRC is our primary innovation addressing the "cognitive black box" problem. It integrates insights from three classical psychological theories:
-
-- **Affect Infusion Model (AIM)**: Path from long-term Mood to short-term Emotion
-- **Emotion Cognition Behavior (ECB) Theory**: Logic of emotion driving thinking and behavior
-- **Theory of Planned Behavior (TPB)**: Progression from thinking to behavioral intentions
-
-The agent's cognitive state is formally defined as a five-dimensional vector: **C_t = (M_t, E_t, T_t, S_t, I_t)**, representing Mood, Emotion, Thinking, Stance, and Intention respectively.
-
-### Dynamic Bayesian Network Integration
-
-To mitigate potential LLM hallucinations, ASCE employs a lightweight Dynamic Bayesian Network (DBN) that learns influence strengths among CRC dimensions online, providing cognitive guidance prompts for consistent decision-making.
 
 ## Visual Analytics Platform
 
@@ -106,56 +84,6 @@ The cognitive knowledge graph visualizes the complex relationships and interacti
 
 This graph-based visualization helps researchers understand the structural aspects of social influence and cognitive contagion.
 
-## System Architecture and Workflow
-
-### Architecture Overview
-
-The ASCE system follows a three-phase architecture with five core modules working in coordination:
-
-**Phase 1: Registration** → **Phase 2: Simulation** → **Phase 3: Analysis**
-
-### Core Module Details
-
-#### 1. Environment Server
-- **Database Management**: SQLite-based storage with standardized schemas
-- **State Maintenance**: Platform state tracking
-- **Post Distribution**: Content routing and popularity scoring
-- **Relationship Graph**: Dynamic social network management
-
-#### 2. Recommendation System
-The hybrid recommendation algorithm uses a weighted scoring model:
-
-```
-S(u,p) = (α·H(p) + β·T(p,t) + γ·F(u,aₚ) + δ·R) × P(u,p)
-```
-
-Where:
-- `H(p)`: Post popularity score
-- `T(p,t)`: Time decay factor
-- `F(u,aₚ)`: Social connection strength
-- `R`: Diversity factor
-- `P(u,p)`: History penalty
-
-#### 3. Agent Module
-- **17 Distinct Actions**: Including like, comment, share, follow, mute, etc.
-- **Memory System**: RAG-based historical context retrieval
-- **Action Execution**: Threaded processing for concurrent operations
-- **State Synchronization**: Cognitive state updates
-
-#### 4. Cognitive Reasoning Chain (CRC)
-The CRC implements the cognitive pathway: **Mood → Emotion → Thinking → Stance → Intention**
-
-**Cognitive State Vector**: `C_t = (M_t, E_t, T_t, S_t, I_t)`
-
-**Dynamic Bayesian Network Integration**: 
-```
-P(X_t | X_{t-1}) = ∏ᵢ₌₁⁵ P(X_{i,t} | Pa(X_{i,t}))
-```
-
-#### 5. Analysis Webpage
-- **Visualization**: Live cognitive state monitoring
-- **Multi-dimensional Analysis**: Time-series, network, and statistical views
-- **Interactive Components**: Dynamic filtering and exploration tools
 
 ## Technical Specifications
 
@@ -229,36 +157,6 @@ inference:
 - `think`: Cognitive state snapshots
 - `trace`: Behavioral trace logs
 
-### Key Algorithms
-
-#### 1. Hybrid Recommendation System
-Multi-factor scoring considering:
-- **Popularity Signals**: Like/comment counts, engagement metrics
-- **Temporal Factors**: Recency-based decay functions
-- **Social Signals**: Following relationships, interaction history
-- **Diversity Mechanisms**: Content type balancing, filter bubbles prevention
-
-#### 2. Dynamic Bayesian Network (DBN)
-- **Online Learning**: Parameter updates from simulation data
-- **Influence Modeling**: Statistical significance testing for cognitive relationships
-- **Natural Language Translation**: Converting statistical relationships to cognitive guidance prompts
-
-#### 3. Cognitive State Update Pipeline
-```python
-# Simplified cognitive update process
-cognitive_state = agent.get_current_state()
-environmental_input = recommendation_system.get_posts(agent_id)
-cognitive_guidance = dbn.generate_guidance(cognitive_state)
-
-new_state, action = llm.process(
-    profile=agent.profile,
-    current_state=cognitive_state,
-    environment=environmental_input,
-    guidance=cognitive_guidance,
-    action_space=ACTION_SPACE,
-    cognitive_space=COGNITIVE_LABELS
-)
-```
 
 ## Research Applications
 
@@ -421,23 +319,6 @@ ASCE-WWW/
     └── workflow.png                   # System architecture diagram
 ```
 
-### Key Implementation Files
-
-#### Core Agent Implementation
-- `asce/social_agent/agent.py`: Main agent class with cognitive state management
-- `asce/social_agent/cognitive_manager.py`: CRC implementation and state updates
-- `asce/social_agent/action_manager.py`: Action execution and coordination
-
-#### Platform Infrastructure  
-- `asce/social_platform/platform.py`: Social media platform simulation
-- `asce/social_platform/recsys.py`: Hybrid recommendation algorithm
-- `asce/social_platform/database.py`: SQLite database operations
-
-#### Cognitive Framework
-- `asce/social_agent/prompt/generate_crc_prompt.py`: Cognitive reasoning chain prompts
-- `cognition_space/`: Cognitive state definitions and normalization
-- `guidance/`: Advanced cognitive guidance and intervention system
-
 ## API Reference and Usage Examples
 
 ### Running Different Simulation Modes
@@ -530,53 +411,5 @@ WHERE user_id = ? AND timestep BETWEEN ? AND ?
 
 interactions = conn.execute(interaction_query, (user_id, start_time, end_time)).fetchall()
 ```
-
-### Performance Monitoring
-
-#### System Requirements
-- **Memory**: 8GB+ RAM for 100+ agents
-- **CPU**: Multi-core recommended for concurrent processing
-- **Storage**: 1GB+ for database and logs
-- **Network**: Internet connection for API-based models
-
-#### Scaling Considerations
-```yaml
-# High-performance configuration
-simulation:
-  max_concurrent_per_api: 64      # Increase for more parallelism
-  num_agents: 500                 # Large-scale simulation
-  activate_prob: 0.8              # Reduce activation for performance
-
-inference:
-  temperature: 0.3                # Lower temperature for consistency
-  max_tokens: 2000               # Reduce for faster processing
-```
-
-### Troubleshooting
-
-#### Common Issues and Solutions
-
-**1. Memory Issues with Large Simulations**
-```bash
-# Monitor memory usage
-python main/main.py --config main/config.yaml --show_detailed_progress true
-```
-
-**2. API Rate Limiting**
-```yaml
-# Adjust configuration for API limits
-inference:
-  max_concurrent_per_api: 16      # Reduce concurrent requests
-  max_retries: 5                  # Increase retry attempts
-```
-
-**3. Database Lock Issues**
-```python
-# Use connection pooling
-database:
-  connection_timeout: 30
-  max_connections: 10
-```
-
 
 *This repository contains the complete implementation of the ASCE system as described in our research paper. The platform demonstrates how cognitive traceability can enhance our understanding of social media dynamics and collective behavior.*
