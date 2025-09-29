@@ -1,0 +1,28 @@
+# Core dependencies from various requirement files and imports
+aiohttp>=3.9.0
+tqdm>=4.65.0
+pyyaml
+colorama
+
+# Machine Learning and AI
+transformers>=4.30.0
+numpy>=1.20.0
+torch
+openai
+
+# Graph and Network
+networkx>=2.8.0
+pyvis>=0.3.0
+
+# LightRAG for RAG functionality
+lightrag-hku>=0.1.0
+
+# Data processing
+pandas
+matplotlib
+seaborn
+
+# Additional dependencies that may be needed
+requests
+scikit-learn
+plotly

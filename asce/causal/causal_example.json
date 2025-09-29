@@ -1,0 +1,72 @@
+{
+  "mood_value": {
+    "positive_effect": {
+      "emotion_value": "Positive mood tends to promote positive emotions, creating a harmonious emotional state.",
+      "thinking_value": "Positive mood often leads to more analytical thinking, as positive mood enhances cognitive flexibility.",
+      "stance_value": "Positive mood typically promotes more neutral or balanced stances, as it reduces polarization.",
+      "intention_value": "Positive mood often leads to more observant intentions, as it reduces the urgency to act impulsively."
+    },
+    "negative_effect": {
+      "emotion_value": "Negative mood tends to suppress positive emotions, creating emotional dissonance.",
+      "thinking_value": "Negative mood may inhibit analytical thinking, as negative mood can narrow cognitive focus.",
+      "stance_value": "Negative mood can lead to more radical stances, as it may increase polarization.",
+      "intention_value": "Negative mood often promotes more active or resistant intentions, as it increases the urgency to respond."
+    }
+  },
+  "emotion_value": {
+    "positive_effect": {
+      "mood_value": "Positive emotions tend to enhance positive mood, creating an upward spiral of positivity.",
+      "thinking_value": "Positive emotions often promote analytical thinking by broadening attention and cognitive resources.",
+      "stance_value": "Positive emotions typically lead to more neutral stances, as they reduce defensive reactions.",
+      "intention_value": "Positive emotions often lead to more expressive intentions, as they increase social engagement."
+    },
+    "negative_effect": {
+      "mood_value": "Negative emotions tend to suppress positive mood, creating a downward spiral of negativity.",
+      "thinking_value": "Negative emotions may inhibit analytical thinking by consuming cognitive resources.",
+      "stance_value": "Negative emotions can promote more radical stances, as they increase defensive reactions.",
+      "intention_value": "Negative emotions often lead to more resistant intentions, as they increase defensive behaviors."
+    }
+  },
+  "thinking_value": {
+    "positive_effect": {
+      "mood_value": "Analytical thinking tends to promote more neutral mood, as it reduces emotional reactivity.",
+      "emotion_value": "Analytical thinking often leads to more complex emotions, as it increases awareness of nuance.",
+      "stance_value": "Analytical thinking typically promotes more neutral stances, as it considers multiple perspectives.",
+      "intention_value": "Analytical thinking often leads to more observant intentions, as it increases deliberation before action."
+    },
+    "negative_effect": {
+      "mood_value": "Less analytical thinking may lead to more polarized mood, as it increases emotional reactivity.",
+      "emotion_value": "Less analytical thinking can lead to simpler, more intense emotions, as it reduces cognitive regulation.",
+      "stance_value": "Less analytical thinking may promote more radical stances, as it reduces consideration of alternatives.",
+      "intention_value": "Less analytical thinking often leads to more active intentions, as it reduces deliberation before action."
+    }
+  },
+  "stance_value": {
+    "positive_effect": {
+      "mood_value": "Conservative stances tend to promote more stable mood, as they maintain existing views.",
+      "emotion_value": "Conservative stances often lead to more positive emotions when existing structures are affirmed.",
+      "thinking_value": "Conservative stances may promote more authority-dependent thinking, valuing established knowledge.",
+      "intention_value": "Conservative stances often lead to more observant intentions, preferring to maintain rather than change."
+    },
+    "negative_effect": {
+      "mood_value": "Radical stances may lead to more negative mood, especially when challenging existing structures.",
+      "emotion_value": "Radical stances can promote more negative emotions when facing resistance to change.",
+      "thinking_value": "Radical stances may inhibit authority-dependent thinking, questioning established knowledge.",
+      "intention_value": "Radical stances often promote more active intentions, seeking to change rather than maintain."
+    }
+  },
+  "intention_value": {
+    "positive_effect": {
+      "mood_value": "Observant intentions tend to promote more neutral mood, as they reduce emotional investment in action.",
+      "emotion_value": "Observant intentions often lead to more complex emotions, as they increase awareness without immediate response.",
+      "thinking_value": "Observant intentions typically promote more analytical thinking, as they prioritize understanding over action.",
+      "stance_value": "Observant intentions may lead to more neutral stances, as they reduce pressure to take sides."
+    },
+    "negative_effect": {
+      "mood_value": "Active intentions may lead to more polarized mood, as they increase emotional investment in outcomes.",
+      "emotion_value": "Active intentions can promote stronger emotions, as they increase personal stake in situations.",
+      "thinking_value": "Active intentions may reduce analytical thinking, as they prioritize action over deliberation.",
+      "stance_value": "Active intentions often promote more radical stances, as they increase pressure to take clear positions."
+    }
+  }
+}

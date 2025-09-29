@@ -1,0 +1,971 @@
+{
+  "mood_type": {
+    "positive": [
+      "positive",
+      "pos",
+      "positive mood",
+      "good",
+      "favorable"
+    ],
+    "negative": [
+      "negative",
+      "neg",
+      "negative mood",
+      "bad",
+      "unfavorable"
+    ],
+    "neutral": [
+      "neutral",
+      "neu",
+      "neutral mood",
+      "balanced",
+      "impartial"
+    ],
+    "ambivalent": [
+      "ambivalent",
+      "mixed",
+      "conflicted",
+      "ambiguous",
+      "uncertain"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "mood_value": {
+    "Optimistic": [
+      "optimistic",
+      "hopeful",
+      "positive",
+      "confident",
+      "upbeat"
+    ],
+    "Confident": [
+      "confident",
+      "assured",
+      "certain",
+      "self-assured",
+      "conviction"
+    ],
+    "Passionate": [
+      "passionate",
+      "enthusiastic",
+      "excited",
+      "fervent",
+      "ardent"
+    ],
+    "Empathetic": [
+      "empathetic",
+      "empathy",
+      "understanding",
+      "compassion",
+      "sympathy"
+    ],
+    "Grateful": [
+      "grateful",
+      "thankful",
+      "appreciative",
+      "gratitude",
+      "recognition"
+    ],
+    "Pessimistic": [
+      "pessimistic",
+      "negative outlook",
+      "cynical",
+      "gloomy",
+      "doubtful"
+    ],
+    "Apathetic": [
+      "apathetic",
+      "indifference",
+      "unconcern",
+      "disinterest",
+      "lack of interest"
+    ],
+    "Distrustful": [
+      "distrustful",
+      "distrust",
+      "suspicion",
+      "doubt",
+      "skepticism",
+      "wariness"
+    ],
+    "Cynical": [
+      "cynical",
+      "skeptical",
+      "doubtful",
+      "pessimistic",
+      "disbelieving"
+    ],
+    "Resentful": [
+      "resentful",
+      "resentment",
+      "bitterness",
+      "grudge",
+      "spite"
+    ],
+    "Realistic": [
+      "realistic",
+      "practical",
+      "pragmatic",
+      "objective",
+      "grounded"
+    ],
+    "Rational": [
+      "rational",
+      "logical",
+      "analytical",
+      "objective analysis",
+      "reasoned",
+      "balanced"
+    ],
+    "Prudent": [
+      "prudent",
+      "careful",
+      "cautious",
+      "wary",
+      "judicious"
+    ],
+    "Detached": [
+      "detached",
+      "distant",
+      "removed",
+      "uninvolved",
+      "disconnected",
+      "reserved"
+    ],
+    "Objective": [
+      "objective",
+      "impartial",
+      "unbiased",
+      "neutral",
+      "fair"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "emotion_type": {
+    "positive": [
+      "positive",
+      "pos",
+      "positive emotion",
+      "good emotion",
+      "positive_emotion"
+    ],
+    "negative": [
+      "negative",
+      "neg",
+      "negative emotion",
+      "bad emotion",
+      "negative_emotion"
+    ],
+    "complex": [
+      "complex",
+      "complex emotion",
+      "mixed",
+      "mixed emotion",
+      "complicated emotion"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "emotion_value": {
+    "Excited": [
+      "excited",
+      "enthusiastic",
+      "Enthusiastic",
+      "thrilled",
+      "exhilarated",
+      "elated",
+      "inspired"
+    ],
+    "Satisfied": [
+      "satisfied",
+      "content",
+      "pleased",
+      "fulfilled",
+      "gratified"
+    ],
+    "Joyful": [
+      "joyful",
+      "joy",
+      "happy",
+      "delighted",
+      "glad",
+      "elated",
+      "pleasure",
+      "happiness"
+    ],
+    "Touched": [
+      "touched",
+      "moved",
+      "affected",
+      "stirred",
+      "impressed",
+      "empathetic"
+    ],
+    "Calm": [
+      "calm",
+      "composed",
+      "relaxed",
+      "Reserved",
+      "Balanced",
+      "serene",
+      "tranquil",
+      "peaceful",
+      "at ease",
+      "objective",
+      "rational"
+    ],
+    "Angry": [
+      "angry",
+      "anger",
+      "rage",
+      "fury",
+      "irate",
+      "indignation",
+      "outrage"
+    ],
+    "Anxious": [
+      "anxious",
+      "anxiety",
+      "nervous",
+      "worried",
+      "uneasy",
+      "apprehensive",
+      "concerned"
+    ],
+    "Depressed": [
+      "depressed",
+      "depression",
+      "sad",
+      "unhappy",
+      "despondent",
+      "melancholy",
+      "down"
+    ],
+    "Fearful": [
+      "fearful",
+      "fear",
+      "afraid",
+      "scared",
+      "terrified",
+      "frightened",
+      "alarmed"
+    ],
+    "Disgusted": [
+      "disgusted",
+      "disgust",
+      "repulsed",
+      "revolted",
+      "nauseated",
+      "aversion",
+      "contempt"
+    ],
+    "Conflicted": [
+      "conflicted",
+      "torn",
+      "divided",
+      "ambivalent",
+      "undecided",
+      "uncertain",
+      "nuanced",
+      "mixed"
+    ],
+    "Doubtful": [
+      "doubtful",
+      "doubt",
+      "unsure",
+      "uncertain",
+      "skeptical",
+      "hesitant",
+      "wary"
+    ],
+    "Hesitant": [
+      "hesitant",
+      "hesitation",
+      "reluctant",
+      "wavering",
+      "indecisive",
+      "tentative"
+    ],
+    "Surprised": [
+      "surprised",
+      "surprise",
+      "shocked",
+      "astonished",
+      "amazed",
+      "startled",
+      "stunned"
+    ],
+    "Helpless": [
+      "helpless",
+      "powerless",
+      "vulnerable",
+      "defenseless",
+      "impotent",
+      "incapable"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "cognition_type": {
+    "intuitive": [
+      "intuitive",
+      "instinctive",
+      "gut feeling",
+      "instinct",
+      "intuition",
+      "experiential"
+    ],
+    "analytical": [
+      "analytical",
+      "analysis",
+      "logical",
+      "rational",
+      "systematic",
+      "reasoned",
+      "theoretical",
+      "empirical",
+      "scientific",
+      "methodical",
+      "data-driven",
+      "evidence-based"
+    ],
+    "authority_dependent": [
+      "authority_dependent",
+      "authority_reliant",
+      "authority reliant",
+      "authority based",
+      "expert",
+      "mainstream",
+      "obedient",
+      "conformist",
+      "follow"
+    ],
+    "critical": [
+      "critical",
+      "questioning",
+      "scrutinizing",
+      "skeptical",
+      "challenging",
+      "doubting",
+      "evaluative",
+      "cautious"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "cognition_value": {
+    "Subjective": [
+      "subjective",
+      "personal",
+      "individual",
+      "biased",
+      "personalized"
+    ],
+    "Gut Feeling": [
+      "gut feeling",
+      "instinctive",
+      "intuition",
+      "hunch",
+      "gut",
+      "gut-feeling",
+      "instinct",
+      "feel",
+      "feeling"
+    ],
+    "Experience-based": [
+      "experience-based",
+      "experiential",
+      "personal experience",
+      "practical experience",
+      "lived experience",
+      "experienced",
+      "practical"
+    ],
+    "Logical": [
+      "logical",
+      "logic",
+      "reason",
+      "reasoning",
+      "rational",
+      "systematic",
+      "methodical",
+      "structured",
+      "rule-based"
+    ],
+    "Evidence-based": [
+      "evidence-based",
+      "evidence",
+      "evidential",
+      "research",
+      "researched",
+      "factual",
+      "fact",
+      "facts"
+    ],
+    "Data-driven": [
+      "data-driven",
+      "data",
+      "statistics",
+      "statistical",
+      "metrics",
+      "analysis"
+    ],
+    "Follow Mainstream": [
+      "follow mainstream",
+      "mainstream",
+      "conventional",
+      "popular",
+      "common",
+      "standard"
+    ],
+    "Trust Experts": [
+      "trust experts",
+      "expert",
+      "experts",
+      "specialist",
+      "professional",
+      "authority",
+      "seeking guidance",
+      "following experts"
+    ],
+    "Obey Authority": [
+      "obey authority",
+      "authority",
+      "authorities",
+      "official",
+      "command",
+      "directive",
+      "instruction"
+    ],
+    "Skeptical": [
+      "skeptical",
+      "skepticism",
+      "doubtful",
+      "doubt",
+      "cautious",
+      "wary",
+      "hesitant"
+    ],
+    "Questioning": [
+      "questioning",
+      "interrogating",
+      "inquiring",
+      "probing",
+      "investigating",
+      "examining"
+    ],
+    "Identifying Flaws": [
+      "identifying flaws",
+      "critique",
+      "critical",
+      "analytical",
+      "flaw",
+      "flaws",
+      "weakness",
+      "weaknesses",
+      "observing"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "stance_type": {
+    "conservative": [
+      "conservative",
+      "traditional",
+      "conventional",
+      "orthodox",
+      "right-wing"
+    ],
+    "radical": [
+      "radical",
+      "revolutionary",
+      "extreme",
+      "far-left",
+      "militant",
+      "progressive",
+      "transformative"
+    ],
+    "neutral": [
+      "neutral",
+      "centrist",
+      "moderate",
+      "middle-ground",
+      "balanced",
+      "non-partisan"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "stance_value": {
+    "Respect Authority": [
+      "respect authority",
+      "respect traditional hierarchy",
+      "traditional respect",
+      "hierarchical values",
+      "conventional authority",
+      "authoritative"
+    ],
+    "Emphasize Stability": [
+      "emphasize stability",
+      "stability",
+      "status quo",
+      "established order",
+      "consistency",
+      "security"
+    ],
+    "Preserve Traditions": [
+      "preserve traditions",
+      "traditional",
+      "customary",
+      "conventional",
+      "established",
+      "uphold traditional family values"
+    ],
+    "Challenge Authority": [
+      "challenge authority",
+      "question authority",
+      "defy authority",
+      "resist authority",
+      "contest power"
+    ],
+    "Break Conventions": [
+      "break conventions",
+      "unconventional",
+      "nonconformist",
+      "against norms",
+      "disruptive",
+      "revolutionary"
+    ],
+    "Promote Change": [
+      "promote change",
+      "advocate systemic change",
+      "system reform",
+      "structural change",
+      "radical reform"
+    ],
+    "Compromise": [
+      "compromise",
+      "middle ground",
+      "balanced approach",
+      "concession",
+      "negotiate"
+    ],
+    "Balance Perspectives": [
+      "balance perspectives",
+      "perspective balance",
+      "multiple viewpoints",
+      "consider all sides",
+      "seek legal balance",
+      "moderate",
+      "balanced"
+    ],
+    "Pragmatic": [
+      "pragmatic",
+      "practical",
+      "functional",
+      "utilitarian",
+      "realistic",
+      "cautious"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "intention_type": {
+    "expressive": [
+      "expressive",
+      "expression",
+      "express",
+      "communicate",
+      "voice",
+      "articulate",
+      "commenting",
+      "writing",
+      "discussing",
+      "sharing",
+      "posting",
+      "creating"
+    ],
+    "active": [
+      "active",
+      "action",
+      "act",
+      "do",
+      "perform",
+      "execute",
+      "advocate",
+      "organizing",
+      "engaging",
+      "participate",
+      "leading",
+      "initiating",
+      "mobilizing",
+      "changing",
+      "volunteer"
+    ],
+    "observant": [
+      "observant",
+      "observing",
+      "observe",
+      "watch",
+      "monitor",
+      "witness",
+      "record",
+      "silent",
+      "lurking",
+      "reading",
+      "browsing",
+      "learning"
+    ],
+    "resistant": [
+      "resistant",
+      "resistance",
+      "resist",
+      "oppose",
+      "counter",
+      "reject",
+      "argue",
+      "protest",
+      "challenge",
+      "criticize",
+      "object",
+      "critique"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "intention_value": {
+    "Commenting": [
+      "commenting",
+      "comment",
+      "talk",
+      "reply",
+      "post",
+      "share",
+      "feedback",
+      "respond"
+    ],
+    "Writing Articles": [
+      "writing articles",
+      "write",
+      "writing",
+      "author",
+      "publish",
+      "blog",
+      "article",
+      "editorial",
+      "column",
+      "creating content"
+    ],
+    "Joining Discussions": [
+      "joining discussions",
+      "discuss",
+      "join",
+      "participate",
+      "debate",
+      "conversation",
+      "forum",
+      "chat",
+      "engage",
+      "dialogue"
+    ],
+    "Organizing Events": [
+      "organizing events",
+      "organize",
+      "organizing",
+      "event",
+      "coordinate",
+      "lead",
+      "arrange",
+      "manage",
+      "plan",
+      "facilitate",
+      "leading initiatives"
+    ],
+    "Advocating Actions": [
+      "advocating actions",
+      "advocate",
+      "advocating",
+      "promote",
+      "campaign",
+      "support",
+      "encourage",
+      "volunteer",
+      "act",
+      "action",
+      "mobilize",
+      "change"
+    ],
+    "Voting": [
+      "voting",
+      "vote",
+      "elect",
+      "ballot",
+      "poll",
+      "cast vote",
+      "democratic process",
+      "electoral"
+    ],
+    "Observing": [
+      "observing",
+      "observe",
+      "watch",
+      "view",
+      "witness",
+      "monitor",
+      "look",
+      "survey",
+      "inspect",
+      "reading",
+      "analyzing",
+      "learning"
+    ],
+    "Recording": [
+      "recording",
+      "record",
+      "document",
+      "note",
+      "track",
+      "log",
+      "collect",
+      "compile",
+      "archive"
+    ],
+    "Remaining Silent": [
+      "remaining silent",
+      "silent",
+      "silence",
+      "quiet",
+      "passive",
+      "lurk",
+      "lurking",
+      "read",
+      "reading",
+      "listen",
+      "learn",
+      "learning",
+      "browse",
+      "browsing"
+    ],
+    "Opposing": [
+      "opposing",
+      "oppose",
+      "resist",
+      "object",
+      "against",
+      "disagree",
+      "reject",
+      "counter",
+      "contravene"
+    ],
+    "Arguing": [
+      "arguing",
+      "argue",
+      "debate",
+      "dispute",
+      "challenge",
+      "confront",
+      "criticize",
+      "critique",
+      "refute",
+      "challenging",
+      "criticizing"
+    ],
+    "Protesting": [
+      "protesting",
+      "protest",
+      "demonstrate",
+      "rally",
+      "boycott",
+      "strike",
+      "dissent",
+      "resist",
+      "march"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "support_levels": {
+    "Strongly Support": [
+      "strongly support",
+      "strong support",
+      "fully support",
+      "full support",
+      "strongly agree",
+      "fully agree",
+      "completely support",
+      "absolutely support",
+      "highly support",
+      "totally support",
+      "very supportive",
+      "great support",
+      "strong agreement",
+      "strong favor",
+      "strongly favor",
+      "very support",
+      "support strongly",
+      "agree strongly",
+      "actively support"
+    ],
+    "Moderate Support": [
+      "Support",
+      "moderate support",
+      "moderately support",
+      "partially support",
+      "somewhat support",
+      "slight support",
+      "mildly support",
+      "support somewhat",
+      "general support",
+      "agree somewhat",
+      "somewhat agree",
+      "partially agree",
+      "mild support",
+      "moderate agreement",
+      "moderate favor",
+      "limited support",
+      "cautious support",
+      "qualified support",
+      "support with reservations",
+      "lean toward supporting"
+    ],
+    "Do Not Support": [
+      "do not support",
+      "don't support",
+      "does not support",
+      "no support",
+      "not support",
+      "unsupported",
+      "don't endorse",
+      "not endorsed",
+      "disagree",
+      "cannot support",
+      "won't support",
+      "lack of support",
+      "unendorsed",
+      "not favored",
+      "reject",
+      "against",
+      "deny support"
+    ],
+    "Moderate Opposition": [
+      "moderate opposition",
+      "moderate oppos",
+      "moderately oppos",
+      "somewhat oppos",
+      "partially oppos",
+      "slight oppos",
+      "mildly oppos",
+      "oppos somewhat",
+      "general oppos",
+      "disagree somewhat",
+      "somewhat disagree",
+      "partially disagree",
+      "mild oppos",
+      "moderate disagreement",
+      "moderate against",
+      "limited oppos",
+      "cautious oppos",
+      "qualified oppos",
+      "oppos with reservations",
+      "lean toward oppos"
+    ],
+    "Strongly Oppose": [
+      "strongly oppose",
+      "strong oppos",
+      "strongly oppos",
+      "fully oppos",
+      "full oppos",
+      "strongly disagree",
+      "fully disagree",
+      "completely oppos",
+      "absolutely oppos",
+      "highly oppos",
+      "totally oppos",
+      "very oppositional",
+      "great oppos",
+      "strong disagreement",
+      "strong against",
+      "strongly against",
+      "very oppos",
+      "oppos strongly",
+      "disagree strongly",
+      "actively oppos"
+    ],
+    "Indifferent": [
+      "indifferent",
+      "neutral",
+      "not care",
+      "don't care",
+      "no opinion",
+      "neither support nor oppose",
+      "neither agree nor disagree",
+      "ambivalent",
+      "undecided",
+      "no stance",
+      "no position",
+      "on the fence",
+      "middle ground",
+      "no preference",
+      "impartial",
+      "disinterested",
+      "equivocal",
+      "uncommitted",
+      "no feelings",
+      "no strong feelings",
+      "apathetic",
+      "lukewarm"
+    ]
+  }
+}

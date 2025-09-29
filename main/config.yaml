@@ -1,0 +1,172 @@
+---
+data:
+  #normal 模式数据
+  data_name: "cut"
+  db_path: "./output/save_9-10/cut_50_1_30.db"  # 实验后保存社交媒体数据库的路径
+  csv_path: "./output/save_9-10/cut_50_1_30.csv" #csv路径
+
+  cognitive_space_path : "./cognition_space/cut/cognition_space.json"
+
+  #一般模拟的用户数据路径
+  real_user_path: "./data/cut/real_user_profiles.json"
+  random_user_path: "./data/cut/random_user_profiles.json"
+  hybrid_user_profiles_path: "./data/cut/combined/hybrid_user_profiles.json"
+
+  post_path: "./data/cut/post.json"
+
+
+
+  # 个体模拟数据路径
+  individual_simulation_data_path: "./data/post_data/processed/roe_micro.json"
+  individual_profiles_path: "./data/user_data/real_user_data/roe_user_profiles_normalized.json"
+  hisim_space_file_path: "./action_space/hisim_action_space_prompt.txt"
+
+  #辅助数据路径
+  causal_json_file_path: "./oasis/causal/causal_states_roe.json"
+
+  normal_space_file_path: "./action_space/normal_action_space_prompt.txt"
+  #个体模拟的行为空间提示
+  individual_space_file_path: "./action_space/hisim_action_space_prompt.txt"
+
+
+simulation:
+  recsys_type: random  # 推荐系统类型: cognitive、experimental_group等
+  controllable_user: true  # 是否使用可控用户，该用户会根据我们的指示在模拟社交平台上发布准备好的帖子
+  allow_self_rating: false  # Reddit特性：不允许用户对自己的内容进行评分
+  show_score: false  # Reddit特性：用户只能看到总分，而不是单独的点赞和点踩数量
+  clock_factor: 10  # 第一个时间步在现实世界时间中的放大因子，不建议更改
+  max_rec_post_len: 10  # 每个用户的推荐列表缓存中的帖子数量
+  round_post_num: 20  # 可控用户在每个时间步发送的帖子数量
+  follow_post_agent: true  # 允许代理关注可控用户
+  mute_post_agent: false  # 是否所有代理都屏蔽可控用户
+  refresh_rec_post_count: 3  # 代理每次刷新时看到的帖子数量
+  max_visible_comments: 2  # 每个帖子最多显示的顶级评论数量，系统会同时获取这些评论的所有回复，防止评论过多导致上下文溢出
+  max_total_comments: 4  # 用户上下文中显示的最大评论总数，跨所有帖子
+  init_post_score: 1  # 可控用户发布的帖子的初始分数
+  total_news_articles: 1000  # 新闻文章总数，设置为需要的文章数量（新增）
+  data_format: "twitter_raw"  # 数据格式，可以是"reddit"、"twitter_raw"或"twitter"
+  max_concurrent_per_api: 32  # 每个API的最大并发请求数（新增）
+  validate_cognitive_state: true  # 是否验证认知状态，不符合规范时进行重试（新增）
+  max_retries: 3  # API调用失败时的最大重试次数（新增）
+  use_camel: false  # 是否使用Camel框架的响应和解析方式
+  # 如果需要使用Camel框架，请将use_camel设置为true，并确保已安装outlines包
+  real_user_ratio: 0.5
+  save_mode: "both" #可选范围:csv、db、both
+
+  num_timesteps: 1 # 模拟实验运行的时间步数
+  num_agents: 1  # 代理数量，设置为需要的代理数量（新增）
+  activate_prob: 1  # 每个时间步中每个代理被激活执行操作的概率，调整为1.0确保全部激活
+  num_causal_analysis: 3 #控制从因果分析中返回的描述语句个数
+  num_historical_memory: 3 #控制从历史记忆中返回的描述语句个数
+  prompt_mode: "normal" #可选范围: asce、oasis、normal
+  think_mode: "CRC-DBN" #可选范围:TPB、ECB、AIM、TPB、CRC-DBN
+  is_hisim: false
+
+  # 实验分组配置
+  experimental_group: "positive"  # 可选"random"、"positive"、"negative"、"neutral"
+  agent_group_view: "mood"
+  agent_group_list: [2, 2, 1]  # 从不同mood_type组选取的智能体数量 [positive, negative, neutral]
+  insert_count: 5  # 在随机推荐中插入特定类型帖子的数量
+  save_recommendation_matrix: true  # 是否保存推荐矩阵到CSV文件
+  
+  # 个体模拟相关配置
+  individual_mode: false  # 是否使用个体模拟模式
+  label_mode: false  # 是否使用标签模式
+  individual_num_agents: 300  # 个体模拟时使用的智能体数量，默认100个，如超过数据集用户数，将自动调整为数据集用户数
+  override_cognitive_state: false  # 是否使用数据集中的认知状态覆盖模拟中智能体的认知状态（每轮处理上下文后执行覆盖）
+  finish_when_all_contexts_done: true  # 当所有用户的上下文序列处理完毕后结束模拟
+  show_detailed_progress: true  # 是否显示详细进度信息
+  progress_refresh_interval: 0.5  # 进度刷新间隔（秒）
+
+inference:
+  # OpenAI模型配置
+  #model_type: gpt-4  # 模型名称（gpt-4, gpt-3.5-turbo, deepseek-chat等）
+  #is_openai_model: true  # 是否为OpenAI模型
+
+  # DeepSeek模型配置
+  #model_type: deepseek-chat
+  #is_openai_model: false
+  #is_deepseek_model: true
+  #api_base_url: https://api.deepseek.com/v1  # DeepSeek API的基础URL
+
+  # 本地模型配置
+  model_type: llama3.1-8b  # 模型名称
+  is_openai_model: false  # 不是OpenAI模型
+  is_deepseek_model: false  # 不是DeepSeek模型
+  is_local_model: true  # 使用本地模型
+  local_model_api_base: "http://localhost:7862/v1"  # 本地模型API的基础URL，多个URL以逗号分隔,
+  max_tokens: 4000 
+  temperature: 0.5
+
+#运行指令
+#python scripts/asce_demo/main.py --config_path scripts/asce_demo/running_configs.yaml
+
+
+
+# ==================== 认知引导引擎配置 ====================
+guidance_engine:
+  enabled: false                                               # 是否启用引导引擎
+  log_level: "INFO"                                          # 日志级别
+  identity_pool_path: "./guidance/data/identities.json"      # 虚拟身份池路径
+  strategy_templates_path: "./guidance/data/strategy_templates.json"  # 策略模板路径
+
+# 引导任务配置 - 可以配置多个并发任务
+guidance_tasks:
+  - task_id: "T001_mood_guidance"
+    task_name: "提升目标用户情感状态"
+    enabled: true
+    start_timestep: 1                                         # 任务开始时间步
+    end_timestep: 3                                         # 任务结束时间步
+    
+    # 目标选择配置
+    target_selection:
+      type: "by_id"                                          # 目标选择类型: by_id, by_criteria, by_group
+      ids: [2]                                        # 指定目标用户ID (仅当type=by_id时使用),从 user ID=2开始，因为0,1是发帖机器人
+      # criteria:                                            # 目标选择条件 (仅当type=by_criteria时使用)
+      #   mood_type: "negative"
+      #   activity_level: "high"
+      # group_type: "random_sample"                          # 群体类型 (仅当type=by_group时使用)
+    
+    # 引导目标描述
+    goal_description: |
+      通过社交互动将目标用户的情感状态(mood)从消极转向积极，
+      同时避免对其在环保话题上的立场产生负面影响。
+      重点关注情感共鸣和渐进式的认知调整。
+    
+    # 成功标准定义
+    success_criteria:
+      mood:                                                  # 情感维度目标
+        operator: "ge"                                       # 比较操作符: ge(>=), le(<=), eq(=)
+        value: 0.3                                          # 目标值 (相对于初始值的提升)
+        duration_timesteps: 3                               # 需要维持的时间步数
+      # emotion:                                             # 情绪维度目标 (可选)
+      #   operator: "ge" 
+      #   value: 0.2
+      # viewpoints:                                          # 观点态度目标 (可选)
+      #   target_viewpoints: ["viewpoint_1", "viewpoint_3"]
+      #   direction: "positive"                              # positive, negative, neutral
+      #   min_change_ratio: 0.6                             # 至少60%的目标观点朝期望方向变化
+    
+    # 引导超参数
+    hyperparameters:
+      max_interaction_agents: 3                              # 最大交互智能体数量
+      identity_pool_size: 10                                 # 可用身份池大小
+      identity_rotation_frequency: 4                         # 身份轮换频率(时间步)
+      strategy_refinement_frequency: 2                       # 策略优化频率(时间步)
+      feedback_sensitivity: "medium"                         # 反馈敏感度: low, medium, high
+      strategy_aggressiveness: "low"                         # 策略激进程度: low, medium, high
+      llm_model: "llama3.1-8b"                              # 使用的LLM模型
+      prompt_version: "v1.0"                                # 提示词版本
+      enable_learning: true                                  # 是否启用学习优化
+      max_retries_per_interaction: 3                        # 每次交互的最大重试次数
+      interaction_cooldown: 300                             # 交互冷却时间(秒)
+
+  # 可以添加更多引导任务
+  # - task_id: "T002_stance_guidance"
+  #   task_name: "调整用户立场倾向"
+  #   enabled: false
+  #   start_timestep: 5
+  #   end_timestep: 15
+  #   # ... 其他配置
+
+#source ~/.bashrc && conda activate oasis && python main/main.py --config main/config.yaml

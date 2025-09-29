@@ -1,0 +1,1001 @@
+{
+  "mood_type": {
+    "positive": [
+      "positive",
+      "pos",
+      "positive mood",
+      "good",
+      "favorable",
+      "upbeat"
+    ],
+    "negative": [
+      "negative",
+      "neg",
+      "negative mood",
+      "bad",
+      "unfavorable",
+      "downbeat"
+    ],
+    "neutral": [
+      "neutral",
+      "neu",
+      "neutral mood",
+      "balanced",
+      "impartial",
+      "even"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "mood_value": {
+    "Enthusiastic": [
+      "enthusiastic",
+      "excited",
+      "eager",
+      "energetic",
+      "passionate"
+    ],
+    "Inspired": [
+      "inspired",
+      "motivated",
+      "stimulated",
+      "encouraged",
+      "uplifted"
+    ],
+    "Hopeful": [
+      "hopeful",
+      "optimistic",
+      "positive",
+      "expectant",
+      "looking forward"
+    ],
+    "Satisfied": [
+      "satisfied",
+      "content",
+      "pleased",
+      "fulfilled",
+      "gratified"
+    ],
+    "Grateful": [
+      "grateful",
+      "thankful",
+      "appreciative",
+      "gratitude",
+      "recognition"
+    ],
+    "Frustrated": [
+      "frustrated",
+      "annoyed",
+      "irritated",
+      "exasperated",
+      "thwarted"
+    ],
+    "Disappointed": [
+      "disappointed",
+      "let down",
+      "disheartened",
+      "discouraged",
+      "displeased"
+    ],
+    "Anxious": [
+      "anxious",
+      "worried",
+      "nervous",
+      "uneasy",
+      "concerned"
+    ],
+    "Irritated": [
+      "irritated",
+      "annoyed",
+      "bothered",
+      "aggravated",
+      "vexed"
+    ],
+    "Overwhelmed": [
+      "overwhelmed",
+      "swamped",
+      "overloaded",
+      "stressed",
+      "burdened"
+    ],
+    "Calm": [
+      "calm",
+      "peaceful",
+      "serene",
+      "tranquil",
+      "relaxed"
+    ],
+    "Balanced": [
+      "balanced",
+      "steady",
+      "stable",
+      "even-keeled",
+      "centered"
+    ],
+    "Composed": [
+      "composed",
+      "collected",
+      "poised",
+      "self-controlled",
+      "unruffled"
+    ],
+    "Reflective": [
+      "reflective",
+      "thoughtful",
+      "contemplative",
+      "meditative",
+      "pensive"
+    ],
+    "Attentive": [
+      "attentive",
+      "alert",
+      "focused",
+      "observant",
+      "mindful"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "emotion_type": {
+    "positive": [
+      "positive",
+      "pos",
+      "positive emotion",
+      "good emotion",
+      "positive_emotion"
+    ],
+    "negative": [
+      "negative",
+      "neg",
+      "negative emotion",
+      "bad emotion",
+      "negative_emotion"
+    ],
+    "complex": [
+      "complex",
+      "complex emotion",
+      "mixed",
+      "mixed emotion",
+      "complicated emotion"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "emotion_value": {
+    "Joyful": [
+      "joyful",
+      "joy",
+      "happy",
+      "delighted",
+      "glad"
+    ],
+    "Proud": [
+      "proud",
+      "pride",
+      "accomplished",
+      "satisfied",
+      "fulfilled"
+    ],
+    "Relieved": [
+      "relieved",
+      "relief",
+      "unburdened",
+      "reassured",
+      "eased"
+    ],
+    "Amused": [
+      "amused",
+      "entertained",
+      "humored",
+      "delighted",
+      "pleased"
+    ],
+    "Interested": [
+      "interested",
+      "engaged",
+      "curious",
+      "intrigued",
+      "fascinated"
+    ],
+    "Sad": [
+      "sad",
+      "unhappy",
+      "sorrowful",
+      "downhearted",
+      "blue"
+    ],
+    "Angry": [
+      "angry",
+      "mad",
+      "furious",
+      "irate",
+      "outraged"
+    ],
+    "Fearful": [
+      "fearful",
+      "afraid",
+      "scared",
+      "frightened",
+      "terrified"
+    ],
+    "Guilty": [
+      "guilty",
+      "remorseful",
+      "regretful",
+      "apologetic",
+      "contrite"
+    ],
+    "Ashamed": [
+      "ashamed",
+      "embarrassed",
+      "humiliated",
+      "mortified",
+      "disgraced"
+    ],
+    "Nostalgic": [
+      "nostalgic",
+      "reminiscent",
+      "wistful",
+      "sentimental",
+      "yearning"
+    ],
+    "Curious": [
+      "curious",
+      "inquisitive",
+      "interested",
+      "questioning",
+      "wondering"
+    ],
+    "Surprised": [
+      "surprised",
+      "astonished",
+      "amazed",
+      "startled",
+      "shocked"
+    ],
+    "Confused": [
+      "confused",
+      "puzzled",
+      "perplexed",
+      "bewildered",
+      "disoriented"
+    ],
+    "Ambivalent": [
+      "ambivalent",
+      "conflicted",
+      "torn",
+      "mixed feelings",
+      "uncertain"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "reasoning_type": {
+    "rational": [
+      "rational",
+      "logical",
+      "analytical",
+      "reasoned",
+      "systematic"
+    ],
+    "intuitive": [
+      "intuitive",
+      "instinctive",
+      "gut feeling",
+      "instinct",
+      "intuition"
+    ],
+    "social": [
+      "social",
+      "collective",
+      "communal",
+      "relational",
+      "interpersonal"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "reasoning_value": {
+    "Logical": [
+      "logical",
+      "reasoned",
+      "rational",
+      "deductive",
+      "structured"
+    ],
+    "Analytical": [
+      "analytical",
+      "detailed",
+      "methodical",
+      "systematic",
+      "thorough"
+    ],
+    "Systematic": [
+      "systematic",
+      "organized",
+      "structured",
+      "methodical",
+      "orderly"
+    ],
+    "Objective": [
+      "objective",
+      "impartial",
+      "unbiased",
+      "neutral",
+      "fair"
+    ],
+    "Methodical": [
+      "methodical",
+      "careful",
+      "precise",
+      "rigorous",
+      "thorough"
+    ],
+    "Instinctive": [
+      "instinctive",
+      "intuitive",
+      "natural",
+      "automatic",
+      "spontaneous"
+    ],
+    "Gut-feeling": [
+      "gut-feeling",
+      "gut feeling",
+      "hunch",
+      "instinct",
+      "intuition"
+    ],
+    "Spontaneous": [
+      "spontaneous",
+      "impulsive",
+      "impromptu",
+      "unplanned",
+      "natural"
+    ],
+    "Creative": [
+      "creative",
+      "imaginative",
+      "innovative",
+      "original",
+      "inventive"
+    ],
+    "Perceptive": [
+      "perceptive",
+      "insightful",
+      "discerning",
+      "astute",
+      "observant"
+    ],
+    "Empathetic": [
+      "empathetic",
+      "compassionate",
+      "understanding",
+      "sensitive",
+      "caring"
+    ],
+    "Collaborative": [
+      "collaborative",
+      "cooperative",
+      "team-oriented",
+      "joint",
+      "collective"
+    ],
+    "Consensus-seeking": [
+      "consensus-seeking",
+      "agreement-oriented",
+      "harmonizing",
+      "unifying",
+      "reconciling"
+    ],
+    "Relationship-oriented": [
+      "relationship-oriented",
+      "people-focused",
+      "interpersonal",
+      "social",
+      "connection-based"
+    ],
+    "Community-minded": [
+      "community-minded",
+      "socially conscious",
+      "group-oriented",
+      "collective",
+      "communal"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "perspective_type": {
+    "global": [
+      "global",
+      "universal",
+      "broad",
+      "comprehensive",
+      "holistic"
+    ],
+    "local": [
+      "local",
+      "specific",
+      "narrow",
+      "focused",
+      "particular"
+    ],
+    "personal": [
+      "personal",
+      "individual",
+      "subjective",
+      "self-oriented",
+      "autobiographical"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "perspective_value": {
+    "Holistic": [
+      "holistic",
+      "comprehensive",
+      "integrated",
+      "big-picture",
+      "all-encompassing"
+    ],
+    "Interconnected": [
+      "interconnected",
+      "interrelated",
+      "linked",
+      "networked",
+      "connected"
+    ],
+    "Long-term": [
+      "long-term",
+      "future-oriented",
+      "forward-looking",
+      "strategic",
+      "visionary"
+    ],
+    "Systemic": [
+      "systemic",
+      "structural",
+      "foundational",
+      "fundamental",
+      "root-cause"
+    ],
+    "Universal": [
+      "universal",
+      "global",
+      "worldwide",
+      "all-encompassing",
+      "comprehensive"
+    ],
+    "Specific": [
+      "specific",
+      "particular",
+      "detailed",
+      "precise",
+      "exact"
+    ],
+    "Immediate": [
+      "immediate",
+      "current",
+      "present",
+      "short-term",
+      "urgent"
+    ],
+    "Contextual": [
+      "contextual",
+      "situational",
+      "circumstantial",
+      "conditional",
+      "relative"
+    ],
+    "Practical": [
+      "practical",
+      "pragmatic",
+      "realistic",
+      "applicable",
+      "useful"
+    ],
+    "Situational": [
+      "situational",
+      "contextual",
+      "circumstantial",
+      "case-by-case",
+      "specific"
+    ],
+    "Self-focused": [
+      "self-focused",
+      "personal",
+      "individual",
+      "self-oriented",
+      "self-centered"
+    ],
+    "Experiential": [
+      "experiential",
+      "experience-based",
+      "lived",
+      "firsthand",
+      "personal"
+    ],
+    "Biographical": [
+      "biographical",
+      "life-story",
+      "personal history",
+      "narrative",
+      "autobiographical"
+    ],
+    "Identity-based": [
+      "identity-based",
+      "self-defining",
+      "characteristic",
+      "personal",
+      "self-related"
+    ],
+    "Subjective": [
+      "subjective",
+      "personal",
+      "individual",
+      "biased",
+      "personalized"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "action_tendency_type": {
+    "proactive": [
+      "proactive",
+      "initiative",
+      "active",
+      "forward",
+      "anticipatory"
+    ],
+    "responsive": [
+      "responsive",
+      "reactive",
+      "adaptive",
+      "adjusting",
+      "accommodating"
+    ],
+    "reflective": [
+      "reflective",
+      "contemplative",
+      "thoughtful",
+      "analytical",
+      "observant"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "action_tendency_value": {
+    "Initiating": [
+      "initiating",
+      "starting",
+      "beginning",
+      "launching",
+      "instigating"
+    ],
+    "Leading": [
+      "leading",
+      "guiding",
+      "directing",
+      "spearheading",
+      "pioneering"
+    ],
+    "Creating": [
+      "creating",
+      "making",
+      "producing",
+      "generating",
+      "developing"
+    ],
+    "Advocating": [
+      "advocating",
+      "promoting",
+      "supporting",
+      "championing",
+      "endorsing"
+    ],
+    "Innovating": [
+      "innovating",
+      "inventing",
+      "pioneering",
+      "revolutionizing",
+      "transforming"
+    ],
+    "Adapting": [
+      "adapting",
+      "adjusting",
+      "modifying",
+      "changing",
+      "accommodating"
+    ],
+    "Adjusting": [
+      "adjusting",
+      "modifying",
+      "altering",
+      "tweaking",
+      "fine-tuning"
+    ],
+    "Reacting": [
+      "reacting",
+      "responding",
+      "replying",
+      "answering",
+      "countering"
+    ],
+    "Accommodating": [
+      "accommodating",
+      "accepting",
+      "yielding",
+      "complying",
+      "conforming"
+    ],
+    "Following": [
+      "following",
+      "adhering",
+      "complying",
+      "obeying",
+      "conforming"
+    ],
+    "Observing": [
+      "observing",
+      "watching",
+      "monitoring",
+      "noticing",
+      "witnessing"
+    ],
+    "Analyzing": [
+      "analyzing",
+      "examining",
+      "studying",
+      "investigating",
+      "scrutinizing"
+    ],
+    "Contemplating": [
+      "contemplating",
+      "reflecting",
+      "pondering",
+      "considering",
+      "meditating"
+    ],
+    "Evaluating": [
+      "evaluating",
+      "assessing",
+      "judging",
+      "appraising",
+      "reviewing"
+    ],
+    "Learning": [
+      "learning",
+      "studying",
+      "acquiring knowledge",
+      "gaining understanding",
+      "educating oneself"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "values_type": {
+    "individual": [
+      "individual",
+      "personal",
+      "self",
+      "autonomous",
+      "independent"
+    ],
+    "communal": [
+      "communal",
+      "collective",
+      "social",
+      "group",
+      "shared"
+    ],
+    "universal": [
+      "universal",
+      "global",
+      "humanitarian",
+      "transcendent",
+      "ethical"
+    ],
+    "others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "values_value": {
+    "Freedom": [
+      "freedom",
+      "liberty",
+      "independence",
+      "autonomy",
+      "self-determination"
+    ],
+    "Achievement": [
+      "achievement",
+      "success",
+      "accomplishment",
+      "attainment",
+      "realization"
+    ],
+    "Self-reliance": [
+      "self-reliance",
+      "independence",
+      "self-sufficiency",
+      "autonomy",
+      "self-dependence"
+    ],
+    "Creativity": [
+      "creativity",
+      "innovation",
+      "originality",
+      "imagination",
+      "inventiveness"
+    ],
+    "Authenticity": [
+      "authenticity",
+      "genuineness",
+      "sincerity",
+      "honesty",
+      "truthfulness"
+    ],
+    "Equality": [
+      "equality",
+      "fairness",
+      "equity",
+      "impartiality",
+      "justice"
+    ],
+    "Solidarity": [
+      "solidarity",
+      "unity",
+      "togetherness",
+      "cohesion",
+      "fellowship"
+    ],
+    "Cooperation": [
+      "cooperation",
+      "collaboration",
+      "teamwork",
+      "partnership",
+      "mutual aid"
+    ],
+    "Harmony": [
+      "harmony",
+      "peace",
+      "balance",
+      "accord",
+      "concord"
+    ],
+    "Responsibility": [
+      "responsibility",
+      "duty",
+      "obligation",
+      "accountability",
+      "commitment"
+    ],
+    "Justice": [
+      "justice",
+      "fairness",
+      "equity",
+      "impartiality",
+      "righteousness"
+    ],
+    "Truth": [
+      "truth",
+      "honesty",
+      "veracity",
+      "accuracy",
+      "factuality"
+    ],
+    "Compassion": [
+      "compassion",
+      "empathy",
+      "kindness",
+      "caring",
+      "sympathy"
+    ],
+    "Sustainability": [
+      "sustainability",
+      "conservation",
+      "preservation",
+      "stewardship",
+      "eco-friendly"
+    ],
+    "Peace": [
+      "peace",
+      "harmony",
+      "tranquility",
+      "serenity",
+      "nonviolence"
+    ],
+    "Others": [
+      "fail",
+      "unknown",
+      "undefined",
+      "error",
+      "N/A"
+    ]
+  },
+  "support_levels": {
+    "Strongly Support": [
+      "strongly support",
+      "strong support",
+      "fully support",
+      "full support",
+      "strongly agree",
+      "fully agree",
+      "completely support",
+      "absolutely support",
+      "highly support",
+      "totally support",
+      "very supportive",
+      "great support",
+      "strong agreement",
+      "strong favor",
+      "strongly favor",
+      "very support",
+      "support strongly",
+      "agree strongly",
+      "actively support"
+    ],
+    "Moderate Support": [
+      "Support",
+      "moderate support",
+      "moderately support",
+      "partially support",
+      "somewhat support",
+      "slight support",
+      "mildly support",
+      "support somewhat",
+      "general support",
+      "agree somewhat",
+      "somewhat agree",
+      "partially agree",
+      "mild support",
+      "moderate agreement",
+      "moderate favor",
+      "limited support",
+      "cautious support",
+      "qualified support",
+      "support with reservations",
+      "lean toward supporting"
+    ],
+    "Do Not Support": [
+      "do not support",
+      "don't support",
+      "does not support",
+      "no support",
+      "not support",
+      "unsupported",
+      "don't endorse",
+      "not endorsed",
+      "disagree",
+      "cannot support",
+      "won't support",
+      "lack of support",
+      "unendorsed",
+      "not favored",
+      "reject",
+      "against",
+      "deny support"
+    ],
+    "Moderate Opposition": [
+      "moderate opposition",
+      "moderate oppos",
+      "moderately oppos",
+      "somewhat oppos",
+      "partially oppos",
+      "slight oppos",
+      "mildly oppos",
+      "oppos somewhat",
+      "general oppos",
+      "disagree somewhat",
+      "somewhat disagree",
+      "partially disagree",
+      "mild oppos",
+      "moderate disagreement",
+      "moderate against",
+      "limited oppos",
+      "cautious oppos",
+      "qualified oppos",
+      "oppos with reservations",
+      "lean toward oppos"
+    ],
+    "Strongly Opposition": [
+      "strongly oppose",
+      "strong oppos",
+      "strongly oppos",
+      "fully oppos",
+      "full oppos",
+      "strongly disagree",
+      "fully disagree",
+      "completely oppos",
+      "absolutely oppos",
+      "highly oppos",
+      "totally oppos",
+      "very oppositional",
+      "great oppos",
+      "strong disagreement",
+      "strong against",
+      "strongly against",
+      "very oppos",
+      "oppos strongly",
+      "disagree strongly",
+      "actively oppos"
+    ],
+    "Indifferent": [
+      "indifferent",
+      "neutral",
+      "not care",
+      "don't care",
+      "no opinion",
+      "neither support nor oppose",
+      "neither agree nor disagree",
+      "ambivalent",
+      "undecided",
+      "no stance",
+      "no position",
+      "on the fence",
+      "middle ground",
+      "no preference",
+      "impartial",
+      "disinterested",
+      "equivocal",
+      "uncommitted",
+      "no feelings",
+      "no strong feelings",
+      "apathetic",
+      "lukewarm"
+    ]
+  }
+}
