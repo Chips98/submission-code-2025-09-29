@@ -109,7 +109,6 @@ This graph-based visualization helps researchers understand the structural aspec
 ## System Architecture and Workflow
 
 ### Architecture Overview
-![System Workflow](figures/workflow.png)
 
 The ASCE system follows a three-phase architecture with five core modules working in coordination:
 
